@@ -26,7 +26,7 @@ export function AuthLayout({ title, subtitle, children, footer }: AuthLayoutProp
         <div className="mt-6 flex gap-3 rounded-md border border-primary-500/25 bg-primary-500/5 p-3.5">
           <Info className="mt-0.5 h-4 w-4 shrink-0 text-primary-400" aria-hidden="true" />
           <p className="text-xs leading-normal text-graphite-300">
-            Demo mode: sign-in is simulated on this device. Credentials are not verified or stored on a server.
+            Your credentials are verified on the server and your password is never stored in the browser.
           </p>
         </div>
 
