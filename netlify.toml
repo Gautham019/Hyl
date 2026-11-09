@@ -1,0 +1,18 @@
+# netlify.toml — goes in the ROOT of the repo (next to package.json)
+#
+# Handles four things at once so you don't have to click through Netlify's UI:
+#   • build command + output folder for Vite
+#   • Node version (Vite 7 requires 20.19+; Netlify's default may be older)
+#   • SPA fallback: without this, refreshing /login or /app returns 404
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20.19.0"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
